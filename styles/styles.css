@@ -21,12 +21,18 @@
     cursor: pointer;
 }
 
-.potato-level-container[active="true"]{
+.potato-level-container[aria-checked="true"]{
     opacity: 1;
 }
 
 .potato-level-container:hover{
     opacity: 1;
+}
+
+.potato-level-container:focus-visible {
+    opacity: 1;
+    outline: 2px solid var(--color-border-highlight, #ff6400);
+    outline-offset: 3px;
 }
 
 .potato-level-row{

@@ -1,11 +1,14 @@
 {
-	"PotatoOrNot.Title": "Potato Or Not",
-	"PotatoOrNot.BadTitle": "Cheap Potato",
-	"PotatoOrNot.BadDescription": "If you have a laptop or a low end computer, use this setting for the best experience!",
-	"PotatoOrNot.MediumTitle": "Potato",
-	"PotatoOrNot.MediumDescription": "You have a mid-range computer that isn't bad, but it's getting on its years.",
-	"PotatoOrNot.GoodTitle": "Premium Potato",
-	"PotatoOrNot.GoodDescription": "Your computer is squarely in the PCMR club.",
-	"PotatoOrNot.Selection": "Select your computer's quality level:",
-	"PotatoOrNot.Accept": "Okay"
+  "PotatoOrNot.Title": "Potato Or Not",
+  "PotatoOrNot.BadTitle": "Cheap Potato",
+  "PotatoOrNot.BadDescription": "If you have a laptop or a low end computer, use this setting for the best experience!",
+  "PotatoOrNot.MediumTitle": "Potato",
+  "PotatoOrNot.MediumDescription": "You have a mid-range computer that isn't bad, but it's getting on its years.",
+  "PotatoOrNot.GoodTitle": "Premium Potato",
+  "PotatoOrNot.GoodDescription": "Your computer is squarely in the PCMR club.",
+  "PotatoOrNot.Selection": "Select your computer's quality level:",
+  "PotatoOrNot.Accept": "Apply settings",
+  "PotatoOrNot.Settings.Name": "Potato Or Not",
+  "PotatoOrNot.Settings.Hint": "Choose a graphics preset for this browser.",
+  "PotatoOrNot.Settings.Label": "Choose graphics preset"
 }

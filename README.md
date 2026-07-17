@@ -1,5 +1,7 @@
 # Potato Or Not
 
+> Compatible with Foundry Virtual Tabletop v13 and verified for v14.
+
 ![Latest Release Download Count](https://img.shields.io/github/downloads/Haxxer/FoundryVTT-PotatoOrNot/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge) [![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fpotato-or-not&colorB=006400&style=for-the-badge)](https://forge-vtt.com/bazaar#package=potato-or-not) ![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2FHaxxer%2FFoundryVTT-PotatoOrNot%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=orange&style=for-the-badge) ![Latest Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2FHaxxer%2FFoundryVTT-PotatoOrNot%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Latest%20Release&prefix=v&query=$.version&colorB=red&style=for-the-badge)
 
 ---
@@ -9,6 +11,7 @@
 A module made by Fantasy Computerworks.
 
 Other works by us:
+
 - [Fantasy Calendar](https://app.fantasy-calendar.com) - The best calendar creator and management app on the internet
 - [Sequencer](https://foundryvtt.com/packages/sequencer) - Wow your players by playing visual effects on the canvas
 - [Item Piles](https://foundryvtt.com/packages/item-piles) - Drag & drop items into the scene to drop item piles that you can then easily pick up
@@ -27,7 +30,17 @@ Is your computer a potato? Is your players' computers potatoes? Are they scared 
 
 Presenting, **Potato Or Not**!
 
-This modules provides a quick way to prompt your players how fast their computer is, and set their graphics settings accordingly.
+This module asks players what class of computer they use and applies an appropriate graphics preset. Settings are stored per browser/client, so each player can choose independently.
+
+## Installation
+
+Paste this manifest URL into Foundry's **Install Module** dialog:
+
+```text
+https://github.com/SoftMissT/FoundryVTT-PotatoOrNot/releases/latest/download/module.json
+```
+
+After enabling the module, open **Game Settings → Configure Settings → Module Settings → Potato Or Not** to change the preset. New clients are prompted automatically while **Prompt All New Users** is enabled.
 
 ![The Dialog](docs/po-ta-toes.jpg)
 
@@ -49,9 +62,13 @@ Sets the graphic quality of the client and update settings associated with that 
 
 ## Hooks
 
-### <code>PotatoOrNot</code>
+### <code>PotatoOrNotReady</code>
 
-Called when the module has been instantiated - use this when calling the methods below
+Called after the module API has been instantiated. The API instance is passed as the first argument.
+
+```js
+Hooks.once("PotatoOrNotReady", (api) => api.addSetting(0, "my-module", "effects", false));
+```
 
 ---
 
@@ -61,7 +78,7 @@ Called when the module has been instantiated - use this when calling the methods
 
 Locally prompts the dialogue
 
-Returns <code>FormApplication</code>
+Returns <code>Promise&lt;ApplicationV2&gt;</code>.
 
 ---
 

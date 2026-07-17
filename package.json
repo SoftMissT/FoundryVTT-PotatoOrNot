@@ -1,5 +1,11 @@
 {
-  "devDependencies": {
-    "@league-of-foundry-developers/foundry-vtt-types": "^9.238.1"
+  "name": "potato-or-not",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check scripts/constants.js && node --check scripts/lib.js && node --check scripts/main.js",
+    "test": "npm run check && node scripts/validate-package.mjs",
+    "build": "node scripts/build.mjs"
   }
 }
