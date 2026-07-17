@@ -13,8 +13,8 @@ CONSTANTS.SETTING_KEYS = {
 
 CONSTANTS.SETTINGS = {
   [CONSTANTS.SETTING_KEYS.PROMPT_USERS]: {
-    name: "Prompt All New Users",
-    hint: "This will make it so that the prompt will be shown to all new users.",
+    name: "PotatoOrNot.Settings.PromptUsers.Name",
+    hint: "PotatoOrNot.Settings.PromptUsers.Hint",
     scope: "world",
     config: true,
     default: true,
@@ -33,7 +33,7 @@ CONSTANTS.SETTINGS = {
     type: Number
   },
   [CONSTANTS.SETTING_KEYS.NUMBER_OF_SETTINGS]: {
-    name: "Show Dialog",
+    name: "PotatoOrNot.Settings.Label",
     scope: "client",
     default: 5,
     type: Number,

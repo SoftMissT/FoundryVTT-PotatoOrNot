@@ -10,5 +10,7 @@
   "PotatoOrNot.Accept": "Appliquer les paramètres",
   "PotatoOrNot.Settings.Name": "Patate ou pas",
   "PotatoOrNot.Settings.Hint": "Choisissez un profil graphique pour ce navigateur.",
-  "PotatoOrNot.Settings.Label": "Choisir le profil graphique"
+  "PotatoOrNot.Settings.Label": "Choisir le profil graphique",
+  "PotatoOrNot.Settings.PromptUsers.Name": "Interroger les nouveaux utilisateurs",
+  "PotatoOrNot.Settings.PromptUsers.Hint": "Affiche automatiquement le sélecteur graphique aux utilisateurs qui n'ont pas configuré ce navigateur."
 }

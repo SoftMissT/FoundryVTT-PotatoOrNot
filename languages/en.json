@@ -10,5 +10,7 @@
   "PotatoOrNot.Accept": "Apply settings",
   "PotatoOrNot.Settings.Name": "Potato Or Not",
   "PotatoOrNot.Settings.Hint": "Choose a graphics preset for this browser.",
-  "PotatoOrNot.Settings.Label": "Choose graphics preset"
+  "PotatoOrNot.Settings.Label": "Choose graphics preset",
+  "PotatoOrNot.Settings.PromptUsers.Name": "Prompt new users",
+  "PotatoOrNot.Settings.PromptUsers.Hint": "Automatically shows the graphics preset selector to users who have not configured this browser."
 }

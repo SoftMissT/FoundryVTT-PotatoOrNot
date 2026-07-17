@@ -10,5 +10,7 @@
   "PotatoOrNot.Accept": "套用設定",
   "PotatoOrNot.Settings.Name": "是不是馬鈴薯",
   "PotatoOrNot.Settings.Hint": "為此瀏覽器選擇圖形設定檔。",
-  "PotatoOrNot.Settings.Label": "選擇圖形設定檔"
+  "PotatoOrNot.Settings.Label": "選擇圖形設定檔",
+  "PotatoOrNot.Settings.PromptUsers.Name": "詢問新使用者",
+  "PotatoOrNot.Settings.PromptUsers.Hint": "自動向尚未設定此瀏覽器的使用者顯示圖形設定選擇器。"
 }

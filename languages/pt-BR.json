@@ -10,5 +10,7 @@
   "PotatoOrNot.Accept": "Aplicar configurações",
   "PotatoOrNot.Settings.Name": "Batata ou Não",
   "PotatoOrNot.Settings.Hint": "Escolha um perfil gráfico para este navegador.",
-  "PotatoOrNot.Settings.Label": "Escolher perfil gráfico"
+  "PotatoOrNot.Settings.Label": "Escolher perfil gráfico",
+  "PotatoOrNot.Settings.PromptUsers.Name": "Perguntar aos novos usuários",
+  "PotatoOrNot.Settings.PromptUsers.Hint": "Exibe automaticamente a escolha de perfil gráfico para cada usuário que ainda não configurou este navegador."
 }

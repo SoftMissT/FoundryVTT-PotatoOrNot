@@ -10,5 +10,7 @@
   "PotatoOrNot.Accept": "設定を適用",
   "PotatoOrNot.Settings.Name": "ポテトかどうか",
   "PotatoOrNot.Settings.Hint": "このブラウザーのグラフィック設定を選択します。",
-  "PotatoOrNot.Settings.Label": "グラフィック設定を選択"
+  "PotatoOrNot.Settings.Label": "グラフィック設定を選択",
+  "PotatoOrNot.Settings.PromptUsers.Name": "新規ユーザーに確認",
+  "PotatoOrNot.Settings.PromptUsers.Hint": "このブラウザーを設定していないユーザーにグラフィック設定の選択画面を表示します。"
 }

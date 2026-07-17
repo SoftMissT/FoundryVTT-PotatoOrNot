@@ -1,125 +1,78 @@
-# Potato Or Not
+# Batata ou Não
 
-> Compatible with Foundry Virtual Tabletop v13 and verified for v14.
+> Compatível com Foundry Virtual Tabletop v13 e verificado para v14.
 
-![Latest Release Download Count](https://img.shields.io/github/downloads/Haxxer/FoundryVTT-PotatoOrNot/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge) [![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fpotato-or-not&colorB=006400&style=for-the-badge)](https://forge-vtt.com/bazaar#package=potato-or-not) ![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2FHaxxer%2FFoundryVTT-PotatoOrNot%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=orange&style=for-the-badge) ![Latest Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2FHaxxer%2FFoundryVTT-PotatoOrNot%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Latest%20Release&prefix=v&query=$.version&colorB=red&style=for-the-badge)
+![Downloads da versão](https://img.shields.io/github/downloads/SoftMissT/FoundryVTT-PotatoOrNot/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge)
+![Versão do Foundry](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FSoftMissT%2FFoundryVTT-PotatoOrNot%2Fmain%2Fmodule.json&label=Foundry&query=$.compatibility.verified&colorB=orange&style=for-the-badge)
+![Última versão](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2FSoftMissT%2FFoundryVTT-PotatoOrNot%2Fmain%2Fmodule.json&label=Vers%C3%A3o&prefix=v&query=$.version&colorB=red&style=for-the-badge)
 
----
+![Samwise Gamgee dizendo Po-Ta-Toes](docs/po-ta-toes.gif)
 
-<img src="https://app.fantasy-calendar.com/resources/computerworks-logo-full.png" alt="Fantasy Computerworks Logo" style="width:250px;"/>
+Seu computador é uma batata? O computador dos seus jogadores sofre para renderizar o canvas?
 
-A module made by Fantasy Computerworks.
+**Batata ou Não** permite que cada jogador escolha entre três perfis de desempenho. O módulo aplica automaticamente as configurações gráficas adequadas e armazena a escolha localmente em cada navegador.
 
-Other works by us:
+![Diálogo de seleção](docs/po-ta-toes.jpg)
 
-- [Fantasy Calendar](https://app.fantasy-calendar.com) - The best calendar creator and management app on the internet
-- [Sequencer](https://foundryvtt.com/packages/sequencer) - Wow your players by playing visual effects on the canvas
-- [Item Piles](https://foundryvtt.com/packages/item-piles) - Drag & drop items into the scene to drop item piles that you can then easily pick up
-- [Tagger](https://foundryvtt.com/packages/tagger) - Tag objects in the scene and retrieve them with a powerful API
-- [Token Ease](https://foundryvtt.com/packages/token-ease) - Make your tokens _feel good_ to move around on the board
+## Instalação
 
-Like what we've done? Buy us a coffee!
-
-<a href='https://ko-fi.com/H2H2LCCQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
----
-
-![Samwise Gamgee Saying Po-Ta-Toes](docs/po-ta-toes.gif)
-
-Is your computer a potato? Is your players' computers potatoes? Are they scared of navigating interfaces?
-
-Presenting, **Potato Or Not**!
-
-This module asks players what class of computer they use and applies an appropriate graphics preset. Settings are stored per browser/client, so each player can choose independently.
-
-## Installation
-
-Paste this manifest URL into Foundry's **Install Module** dialog:
+Cole este endereço em **Instalar módulo** no Foundry:
 
 ```text
-https://github.com/SoftMissT/FoundryVTT-PotatoOrNot/releases/latest/download/module.json
+https://raw.githubusercontent.com/SoftMissT/FoundryVTT-PotatoOrNot/main/module.json
 ```
 
-After enabling the module, open **Game Settings → Configure Settings → Module Settings → Potato Or Not** to change the preset. New clients are prompted automatically while **Prompt All New Users** is enabled.
+Depois de ativar o módulo, acesse:
 
-![The Dialog](docs/po-ta-toes.jpg)
+**Configurações do jogo → Configurar ajustes → Configurações de módulo → Batata ou Não**
 
----
+Cada jogador pode escolher seu próprio perfil. Quando **Perguntar aos novos usuários** estiver ativado, o seletor será aberto automaticamente para usuários que ainda não configuraram aquele navegador.
 
-# API Documentation
+## Perfis disponíveis
 
-## Constants
-
-### <code>PotatoOrNot.quality</code>
-
-Sets the graphic quality of the client and update settings associated with that quality level
-
-| Param | Type | Range |
+| Perfil | Indicação | Resultado |
 | --- | --- | --- |
-| quality | <code>number</code> | 0-2 |
+| Batata Ruim | Notebook ou computador básico | Prioriza desempenho e reduz efeitos gráficos |
+| Batata | Computador intermediário | Equilibra qualidade visual e desempenho |
+| Batata Premium | Computador potente | Ativa a melhor qualidade visual disponível |
 
----
+## Desenvolvimento
 
-## Hooks
+```bash
+npm install
+npm test
+npm run build
+```
 
-### <code>PotatoOrNotReady</code>
+O build pronto para distribuição será criado em `dist/`.
 
-Called after the module API has been instantiated. The API instance is passed as the first argument.
+## API
+
+O identificador técnico e a API continuam em inglês para preservar compatibilidade.
+
+### `PotatoOrNot.quality`
+
+Lê ou define o perfil atual usando um número entre `0` e `2`.
+
+### `PotatoOrNotReady`
+
+Executado quando a API do módulo está pronta:
 
 ```js
-Hooks.once("PotatoOrNotReady", (api) => api.addSetting(0, "my-module", "effects", false));
+Hooks.once("PotatoOrNotReady", (api) => {
+  api.addSetting(0, "meu-modulo", "efeitos", false);
+});
 ```
 
----
+### Métodos públicos
 
-## Functions
+- `PotatoOrNot.showDialog()` — abre o seletor localmente.
+- `PotatoOrNot.getSetting(qualityLevel, moduleId, setting)` — consulta uma configuração do perfil.
+- `PotatoOrNot.addSetting(qualityLevel, moduleId, setting, value, force)` — adiciona uma configuração.
+- `PotatoOrNot.removeSetting(qualityLevel, moduleId, setting)` — remove uma configuração.
 
-### <code>PotatoOrNot.showDialog</code>
+## Créditos e licença
 
-Locally prompts the dialogue
+Projeto original de Fantasy Computerworks/Wasp, modernizado para Foundry v14 e localizado em português.
 
-Returns <code>Promise&lt;ApplicationV2&gt;</code>.
-
----
-
-### <code>PotatoOrNot.getSetting</code>
-
-Gets the value of a setting of a module at a quality level
-
-| Param | Type |
-| --- | --- |
-| quality_level | <code>number</code> |
-| module | <code>string</code> |
-| setting | <code>string</code> |
-
-Returns <code>\*</code> on success
-
----
-
-### <code>PotatoOrNot.addSetting</code>
-
-Adds a setting to be applied on a quality level - can be forced to be applied immediately (if quality level matches)
-
-| Param | Type |
-| --- | --- |
-| quality_level | <code>number</code> |
-| module | <code>string</code> |
-| setting | <code>string</code> |
-| value | <code>\*</code> |
-| force | <code>bool</code> |
-
-Returns <code>bool</code> on success
-
----
-
-### <code>PotatoOrNot.removeSetting</code>
-
-Removes a setting from a quality level
-
-| Param | Type |
-| --- | --- |
-| quality_level | <code>number</code> |
-| module | <code>string</code> |
-| setting | <code>string</code> |
-
-Returns <code>bool</code> on success
+Distribuído sob a licença indicada em [LICENSE](LICENSE).
